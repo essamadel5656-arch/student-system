@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $fillable = ['name','email','phone','age'];
+   public function grades()
+{
+    return $this->hasMany(Grade::class);
+}
 }
